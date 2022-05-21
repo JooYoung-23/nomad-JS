@@ -1,11 +1,17 @@
-.hidden {
-    display: none;
+  :root{
+    --font-color: rgba(255, 255, 255, 0.932);
+    --shadow-color: rgb(61, 61, 61);
   }
-
+  
+  .hidden {
+    display: none !important;
+  }
+  
   .container{
+    height: 95vh;
     display: flex;
+    position: relative;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     min-width: 50vw;
   }
@@ -13,7 +19,8 @@
   #clock{
     margin-bottom: 0;
     font-size: 30pt;
-    color: rgb(90, 90, 90);
+    color: var(--shadow-color);
+    font-weight: bolder;
   }
 
   @keyframes blink-effect { 50% { opacity: 0; } }
@@ -22,7 +29,7 @@
     color: rgb(196, 59, 59);
   }
 
-  .login-form{
+#login-form{
     margin: 2%;
     width: 50%;
     height: 10vh;
@@ -33,22 +40,24 @@
     justify-content: center;
     align-items: center;
   }
-  .login-form input:first-child{
-    /*border: none;*/
-    border-radius: 100px;
+  #login-form input:first-child{
+    border: 1px solid var(--font-color);
+    border-radius: 0px 80px 80px;
     outline: none;
     padding: 10px;
     width: 50%;
     height: 50%;
     text-align: center;
     font-size: 15pt;
+    background-color: transparent;
+    color: var(--font-color);
   }
-  .login-form input:first-child::placeholder{
-    color: black;
+  #login-form input:first-child::placeholder{
+    color: var(--font-color);
   }
 
-  .login-form input:last-child{
-    background-color: white;
+  #login-form input:last-child{
+    color: var(--font-color);
     border: none;
     outline: none;
     padding: 10px;
@@ -56,4 +65,87 @@
     position: absolute;
     right: 25%;
     text-decoration: underline;
+    background-color: transparent;
+  }
+
+  #greeting{
+    margin: 2%;
+    width: 50%;
+    height: 10vh;
+    display: flex;
+
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--font-color);
+    text-shadow: 1px 2px var(--shadow-color);
+  }
+
+  #todo-container{
+    position: relative;
+  }
+  #todo-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+  }
+  #todo-form input{
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 11pt;
+    background-color: transparent;
+  }
+  #todo-list{
+    padding: 0;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-color);
+  }
+  #todo-list button{
+    position: absolute;
+    right: 38%;
+    background-color: transparent;
+    padding: 0;
+    margin-left: 10px;
+    border: none;
+  }
+
+  #quote{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 20pt;
+    letter-spacing: 10px;
+    
+    color: var(--font-color);
+    text-shadow: 1px 2px var(--shadow-color);
+  }
+  #quote p:last-child{
+    text-decoration: overline;
+    padding: 10px 0 10px 0;
+    text-shadow: 1px 2px var(--shadow-color);
+    font-weight: bold;
+  }
+
+  #weather{
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 2px 8px;
+    color: var(--shadow-color);
+  }
+
+  #weather p{
+    margin: 0;
+    font-style: italic;
   }

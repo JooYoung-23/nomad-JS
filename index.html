@@ -11,32 +11,35 @@
     <main class="container">
         <h2 id="clock"><span></span><span></span></h2>
 
-        <form class="hidden login-form" id="login-form">
-        <input
-            class="login-input"
-            required
-            maxlength="15"
-            type="text"
-            placeholder="What is your name?"
-        />
-        <input type="submit" value="Sign In" />
+        <form class="hidden" id="login-form">
+            <input
+                class="login-input"
+                required
+                maxlength="15"
+                type="text"
+                placeholder="What is your name?"
+            />
+            <input type="submit" value="Sign In" />
         </form>
 
         <h1 class="hidden" id="greeting"></h1>
 
+        <div class="todo-container">
+            <form id="todo-form">
+                <input type="text" placeholder="Write a To Do and Press Enter" required>
+            </form>
+
+            <ul id="todo-list"></ul>
+        </div>
+        
         <div id="quote">
             <p></p>
-            <p></p>
+             <p></p>
         </div>
-
-        <form id="todo-form">
-            <input type="text" placeholder="Write a To Do and Press Enter" required>
-        </form>
-        <ul id="todo-list"></ul>
     </main>
     <div id="weather">
-        <span></span>
-        <span></span>
+        <p></p>
+        <p></p>
     </div>
     <script src="JS/greetings.js"></script>
     <script src="JS/clock.js"></script>
