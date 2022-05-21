@@ -96,7 +96,7 @@
     width: 100%;
     text-align: center;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--shadow-color);
     outline: none;
     font-size: 11pt;
     background-color: transparent;
